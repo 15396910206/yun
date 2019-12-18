@@ -33,7 +33,7 @@
 
     <footer class="footer">
         <div class="wrapper">
-            <div style="width: 500px;" class="show">
+            <div style="width: 700px;" class="show">
                 <div><a href="./index.html">首页</a></div>
                 <div><a href="./news.html">新手指南</a></div>
                 <div><a href="./jiqiao.html">轮滑技巧</a></div>
@@ -84,7 +84,7 @@
     function getData() {
         var lists = "";
         list.forEach(p => {
-            lists += `<div class='dem'>` + `<div style='display:flex;border-bottom:1px solid #092f55;margin-bottom:20px;padding:10px 0px 10px 0px;cursor:pointer;' onclick="show()">` + `<img src='${p.path}' style="width:320px;heigth:180px;" >` + `<span style="text-indent:2em;padding-top:20px;padding-left:6px">` + p.text + `</span>` + `</div>` + `<div>`
+            lists += `<div class='dem'>` + `<div style='display:flex;border-bottom:1px solid #092f55;margin-bottom:20px;padding:10px 0px 10px 0px;cursor:pointer;' onclick="show()">` + `<img src='${p.path}' style="width:40%;height:42%;" >` + `<span style="text-indent:2em;padding-top:20px;padding-left:6px">` + p.text + `</span>` + `</div>` + `<div>`
         })
         cell.innerHTML = lists
     }
