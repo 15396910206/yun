@@ -13,20 +13,162 @@
             <li><a href="./cotentUs.html">联系我们</a></li>
         </ul>
     </div>
-    我是新手指南
+    <article>
+        <section>
+            <div class="all">
+                <div class="search">
+                    <span>最新动态：</span>
+                    <input placeholder="请输入..." />
+                    <button>搜索</button>
+                </div>
+                <div class="content" id="content">
+
+                </div>
+            </div>
+        </section>
+    </article>
+
+
+
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div style="width: 500px;" class="show">
+                <div><a href="./index.html">首页</a></div>
+                <div><a href="./news.html">新手指南</a></div>
+                <div><a href="./jiqiao.html">轮滑技巧</a></div>
+                <div><a href="./jiqiao.html">轮滑技巧</a></div>
+                <div><a href="./cotentUs.html">联系我们</a></div>
+            </div>
+            <div class="control">
+                <input placeholder="Enter your E-mail" />
+                <button>contant us</button>
+            </div>
+        </div>
+        <div style="text-align: center;margin-top: 30px; padding-bottom: 20px;">Copyright ©2019 Tencent. All Rights
+            Reserved.
+            大云版权所有</div>
+    </footer>
+
 </div>
 
 
-
-
-
 <script>
-
+    var list = [
+        {
+            id: 1,
+            path: './image/16pic_4679363_b.jpg',
+            text: '让孩子吃点苦，人生路是孩子自己走的，该面对的阻碍、经历的挫折，忍受的磨难绝对躲不过。家长用自己的经验，告诉孩子少走弯路，不如培养TA面对困难的心理承受能力以及解决问题的实力。带孩子学一项体育，比如轮滑运动。让他吃点苦，锻炼体质、磨砺意志，遇到困难用冷静与实力解决，不退缩、不犹豫，这便是少走弯路。',
+            route: ''
+        },
+        {
+            id: 1,
+            path: './image/timg (1).jpg',
+            text: '  平地花式轮滑，现改名自由式轮滑；是指穿轮滑鞋在固定数量的标准桩距间做技巧动作的各式连续滑行。平地花式轮滑最大特点是，初学入门较容易，因无跳起动作，所以危险性伤害很小，方便练习。不像花样轮滑对场地的严格要求及有旋转跳跃的高难动作。然而该项目的自由发挥度，使其流畅柔美的轮上舞姿魅力，已成为当今轮滑时尚的最新亮点，越来越受人们的喜爱。',
+            route: ''
+        }
+    ]
+    var cell = document.getElementById('content');
+    function getData() {
+        var lists = "";
+        list.forEach(p => {
+            lists += `<div class='dem'>` + `<img src='${p.path}' style="width:320px;heigth:180px;" >` + `<span style="text-indent:2em;padding-top:20px;padding-left:6px">` + p.text + `</span>` + `<a href='${p.route}' style='text-decoration:none;color:#edae24'>` + `了解更多》》》` + `</a>` + `<div>`
+        })
+        cell.innerHTML = lists
+    }
+    getData();
 
 </script>
 
 <style>
-    .news {}
+    .all .search>span {
+        font-size: 25px;
+    }
+
+    .all>.search>input {
+        height: 30px;
+        border: 1px solid #edae24;
+        border-radius: 5px;
+    }
+
+    .all>.search>button {
+        cursor: pointer;
+        color: #fff;
+        margin-left: 20px;
+        height: 30px;
+        border: none;
+        padding: 5px;
+        width: 60px;
+        border-radius: 3px;
+        background-color: #edae24;
+    }
+
+    .all {
+        margin: 29px 370px 29px 370px;
+    }
+
+    .all>.search {
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid #092f55;
+    }
+
+    .footer>.wrapper>.control {
+        width: 300px;
+    }
+
+    .footer>.wrapper>.show {
+        display: flex;
+    }
+
+    .footer>.wrapper>.show>div {
+        padding-left: 30px;
+    }
+
+    .footer>.wrapper>.show>div>a {
+        color: #595757;
+        font-size: 1.2em;
+        line-height: 30px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .footer>.wrapper>.control>input {
+        border: none;
+        height: 30px;
+        width: 256px;
+    }
+
+    .footer>.wrapper>.control>button {
+        border: none;
+        margin-top: 15px;
+        border: none;
+        height: 30px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #162d55;
+        width: 256px;
+        cursor: pointer;
+    }
+
+    .footer>.wrapper>.control>button:hover {
+        border-color: #162d55;
+    }
+
+    .footer {
+        width: 100%;
+        background: #e6e7e7;
+    }
+
+
+    .footer>.wrapper {
+        padding-top: 20px;
+        margin: 0px 370px 0px 370px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 
     body {
         margin: 0px;
@@ -34,24 +176,32 @@
     }
 
     .nav {
-        padding: 8px;
+        padding: 4px;
         color: white;
-        background-color: #409EFF;
+        background-color: #edae24;
     }
 
-    ul {
+    .nav ul {
         justify-content: flex-end;
         display: flex;
         list-style: none;
     }
 
-    ul>li {
+    .nav ul>li {
         cursor: pointer;
         padding-right: 80px;
 
     }
 
-    ul>li>a {
+    .bg>.title {
+        color: #fff;
+        font-size: 30px;
+        left: 200px;
+        top: 230px;
+        position: absolute;
+    }
+
+    .nav ul>li>a {
         color: #fff;
         text-decoration: none;
     }

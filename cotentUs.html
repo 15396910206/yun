@@ -13,12 +13,32 @@
             <li><a href="./cotentUs.html">联系我们</a></li>
         </ul>
     </div>
+
+
+
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div style="width: 500px;" class="show">
+                <div><a href="./index.html">首页</a></div>
+                <div><a href="./news.html">新手指南</a></div>
+                <div><a href="./jiqiao.html">轮滑技巧</a></div>
+                <div><a href="./jiqiao.html">轮滑技巧</a></div>
+                <div><a href="./cotentUs.html">联系我们</a></div>
+            </div>
+            <div class="control">
+                <input placeholder="Enter your E-mail" />
+                <button>contant us</button>
+            </div>
+        </div>
+        <div style="text-align: center;margin-top: 30px; padding-bottom: 20px;">Copyright ©2019 Tencent. All Rights
+            Reserved.
+            大云版权所有</div>
+    </footer>
+    
 </div>
 
-<div>
-    <input>
-    </input>
-</div>
+
 
 
 
@@ -28,32 +48,95 @@
 </script>
 
 <style>
-    .news {}
 
+.footer>.wrapper>.control {
+        width: 300px;
+    }
+
+    .footer>.wrapper>.show {
+        display: flex;
+    }
+
+    .footer>.wrapper>.show>div {
+        padding-left: 30px;
+    }
+
+    .footer>.wrapper>.show>div>a {
+        color: #595757;
+        font-size: 1.2em;
+        line-height: 30px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .footer>.wrapper>.control>input {
+        border: none;
+        height: 30px;
+        width: 256px;
+    }
+
+    .footer>.wrapper>.control>button {
+        border: none;
+        margin-top: 15px;
+        border: none;
+        height: 30px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #162d55;
+        width: 256px;
+        cursor: pointer;
+    }
+
+    .footer>.wrapper>.control>button:hover {
+        border-color: #162d55;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        background: #e6e7e7;
+    }
+
+    .footer>.wrapper {
+        padding-top: 20px;
+        margin: 0px 370px 0px 370px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
     body {
         margin: 0px;
         padding: 0px;
     }
 
     .nav {
-        padding: 8px;
+        padding: 4px;
         color: white;
-        background-color: #409EFF;
+        background-color: #edae24;
     }
 
-    ul {
+    .nav ul {
         justify-content: flex-end;
         display: flex;
         list-style: none;
     }
 
-    ul>li {
+    .nav ul>li {
         cursor: pointer;
         padding-right: 80px;
 
     }
 
-    ul>li>a {
+    .bg>.title {
+        color: #fff;
+        font-size: 30px;
+        left: 200px;
+        top: 230px;
+        position: absolute;
+    }
+
+    .nav ul>li>a {
         color: #fff;
         text-decoration: none;
     }
